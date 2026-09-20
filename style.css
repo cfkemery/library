@@ -16,6 +16,13 @@
     font-display: swap;
 }
 
+:root {
+    --tan: #D2B48C;
+    --dark-tan: #c49c75;
+    --cream: #f3e9dc;
+    --espresso: #4a3525;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -23,5 +30,100 @@
 }
 
 body {
-    background-color: rgb(155, 147, 147);
+    background-color: var(--tan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+}
 
+.library {
+    height: 700px;
+    width: 60%;
+    background-color: var(--dark-tan);
+    border: 1px solid var(--cream);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(200px, 1fr));
+    padding: 30px;
+}
+
+body > button {
+    height: 50px;
+    width: 10%;
+    min-width: 100px;
+    border: 1px solid var(--cream);
+    border-radius: 20px;
+    background-color: var(--cream);
+    color: var(--espresso);
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--cream);
+    height: 150px;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: var(--cream);
+    color: var(--espresso);
+    border-radius: 10px;
+}
+
+.book-title {
+    font-size: 25px;
+}
+
+dialog[open] {
+    height: 350px;
+    width: 300px;
+    border: 1px solid var(--cream);
+    border-radius: 15px;
+    background-color: var(--dark-tan);
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    font-size: 15px;
+}
+
+form legend {
+    font-size: 20px;
+    color: var(--espresso);
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    color: var(--espresso);
+    padding-top: 5px;
+}
+
+form input[type='text'], input[type='number'] {
+    background-color: var(--cream);
+    border: 1px solid (--cream);
+    border-radius: 5px;
+}
+
+form > button {
+    background-color: var(--cream);
+    color: var(--espresso);
+    border: 1px solid var(--cream);
+    border-radius: 5px;
+}
+
+.radio-input {
+    border: none;
+    font-size: 15px;
+}
+
+fieldset legend {
+    font-size: 15px;
+    padding-top: 5px;
+}

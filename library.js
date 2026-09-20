@@ -24,31 +24,48 @@ function displayMyLibrary(array) {
 
         const titleP = document.createElement('p');
         titleP.classList.add('book-title');
-        titleP.textContent = book.title;
+        titleP.textContent = `Title: ${book.title}`;
         newCard.appendChild(titleP);
 
         const authorP = document.createElement('p');
         authorP.classList.add('book-info');
-        authorP.textContent = book.author;
+        authorP.textContent = `Author: ${book.author}`;
         newCard.appendChild(authorP);
 
         const seriesP = document.createElement('p');
         seriesP.classList.add('book-info');
-        seriesP.textContent = book.series;
+        seriesP.textContent = `Series: ${book.series}`;
         newCard.appendChild(seriesP);
 
         const bookNumberP = document.createElement('p');
         bookNumberP.classList.add('book-info');
-        bookNumberP.textContent = book.bookNumber;
+        bookNumberP.textContent = `Book Number in Series: ${book.bookNumber}`;
         newCard.appendChild(bookNumberP);
 
         const readP = document.createElement('p');
         readP.classList.add('book-info');
-        readP.textContent = book.read;
+        readP.textContent = `Read: ${book.read}`;
         newCard.appendChild(readP);
     })}
 
-addBookToLibrary("caleb", "katie", "poppy", 1, "yes");
-console.log(myLibrary);
+function submitNewBook() {
+    const dialog = document.getElementById('new-book');
+    const titleForm = document.getElementById('title').value;
+    const authorForm = document.getElementById('author').value;
+    const seriesForm = document.getElementById('series').value;
+    const bookNumberForm = document.getElementById('book-number').value;
+    const readForm = document.querySelector('input[name="read"]:checked').value;
 
-displayMyLibrary(myLibrary);
+    addBookToLibrary(titleForm, authorForm, seriesForm, bookNumberForm, readForm);
+
+    dialog.close();
+
+    displayMyLibrary(myLibrary);
+}
+
+const submitButton = document.querySelector('.submit');
+
+submitButton.addEventListener('click', function() {
+    event.preventDefault();
+    submitNewBook();
+});

@@ -15,12 +15,12 @@
 
             <div class="form-input">
                 <label for="title">Title</label>
-                <input id="title" name="title" type="text">
+                <input id="title" name="title" type="text" required>
             </div>
 
             <div class="form-input">
                 <label for="author">Author</label>
-                <input id="author" name="author" type="text">
+                <input id="author" name="author" type="text" required>
             </div>
 
             <div class="form-input">
@@ -33,14 +33,18 @@
                 <input id="book-number" name="book-number" type="number" min="1">
             </div>
 
-            <div class="form-input">
+            <fieldset class="radio-input">
+                <legend>Book already been read?</legend>
+                <div>
                 <label for="yes">Yes</label>
-                <input id="yes" name="read" type="radio" value="yes">
-
+                <input id="yes" name="read" type="radio" value="yes" required>
+                </div>
+                <div>
                 <label for="no">No</label>
                 <input id="no" name="read" type="radio" value="no">
-            </div>
-            <button>Submit</button>
+                </div>
+            </fieldset>
+            <button id="submit" class="submit">Submit</button>
         </form>
 
     </dialog>
