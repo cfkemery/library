@@ -58,6 +58,7 @@ function submitNewBook() {
 
     addBookToLibrary(titleForm, authorForm, seriesForm, bookNumberForm, readForm);
 
+    document.querySelector('.book-form').reset();
     dialog.close();
 
     displayMyLibrary(myLibrary);
