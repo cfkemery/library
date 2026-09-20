@@ -45,8 +45,9 @@ body {
     border: 1px solid var(--cream);
     border-radius: 15px;
     display: grid;
-    grid-template-columns: repeat(autofit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     padding: 30px;
+    gap: 15px;
 }
 
 body > button {
