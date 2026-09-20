@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Fraunces';
+    src: url('/font/Fraunces-9ptBlack.woff2') format('woff2'),
+        url('/font/') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fraunces';
+    src: url('/font/Fraunces-9ptBlackItalic.woff2') format('woff2'),
+        url('/font/Fraunces-9ptBlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fraunces';
+}
+
+body {
+    background-color: rgb(155, 147, 147);
+

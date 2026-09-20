@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+   <button class="new-Book" command="show-modal" commandfor="new-book">New Book</button>
+    
+   <dialog id="new-book">
+        <form action="" method="get" class="book-form">
+            <legend>New Book Information</legend> 
+
+            <div class="form-input">
+                <label for="title">Title</label>
+                <input id="title" name="title" type="text">
+            </div>
+
+            <div class="form-input">
+                <label for="author">Author</label>
+                <input id="author" name="author" type="text">
+            </div>
+
+            <div class="form-input">
+                <label for="series">Series</label>
+                <input id="series" name="series" type="text">
+            </div>
+
+            <div class="form-input">
+                <label for="book-number">Book Number in Series</label>
+                <input id="book-number" name="book-number" type="number" min="1">
+            </div>
+
+            <div class="form-input">
+                <label for="yes">Yes</label>
+                <input id="yes" name="read" type="radio" value="yes">
+
+                <label for="no">No</label>
+                <input id="no" name="read" type="radio" value="no">
+            </div>
+            <button>Submit</button>
+        </form>
+
+    </dialog>
+
+
+   <div class="library"></div>
+   <script src="library.js" defer></script> 
+</body>
+</html>
