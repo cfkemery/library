@@ -1,4 +1,4 @@
-const myLibrary = [];
+let myLibrary = [];
 
 function Book(title, author, series, bookNumber, read) {
     this.title = title;
@@ -46,7 +46,19 @@ function displayMyLibrary(array) {
         readP.classList.add('book-info');
         readP.textContent = `Read: ${book.read}`;
         newCard.appendChild(readP);
-    })}
+
+        const deleteButton = document.createElement('button');
+        deleteButton.classList.add('delete');
+        deleteButton.textContent = 'Remove';
+        deleteButton.setAttribute('id', book.id);
+
+        deleteButton.addEventListener('click', function() {
+        myLibrary = myLibrary.filter(object => object.id !== deleteButton.id);
+        displayMyLibrary(myLibrary);
+        return myLibrary;})
+
+        newCard.appendChild(deleteButton);
+})}
 
 function submitNewBook() {
     const dialog = document.getElementById('new-book');
@@ -62,6 +74,8 @@ function submitNewBook() {
     dialog.close();
 
     displayMyLibrary(myLibrary);
+
+    return myLibrary;
 }
 
 const submitButton = document.querySelector('.submit');
@@ -70,3 +84,5 @@ submitButton.addEventListener('click', function() {
     event.preventDefault();
     submitNewBook();
 });
+
+
