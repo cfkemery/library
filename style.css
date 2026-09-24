@@ -128,3 +128,13 @@ fieldset legend {
     font-size: 15px;
     padding-top: 5px;
 }
+
+.delete {
+    width: 60px;
+    align-self: end;
+    font-size: 10px;
+    background-color: var(--tan);
+    border: 1px solid var(--cream);
+    border-radius: 5px;
+    color: var(--espresso);
+}
