@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Fraunces';
     src: url('font/Fraunces-9ptBlack.woff2') format('woff2'),
-        url('font/') format('woff');
+        url('font/Fraunces-9ptBlack.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
