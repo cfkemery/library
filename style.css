@@ -67,6 +67,7 @@ body > button {
     height: 150px;
     justify-content: space-evenly;
     padding: 10px;
+    padding-top: 5px;
     background-color: var(--cream);
     color: var(--espresso);
     border-radius: 10px;
@@ -137,7 +138,6 @@ fieldset legend {
     border: 1px solid var(--cream);
     border-radius: 5px;
     color: var(--espresso);
-    margin-top: 5px;
 }
 
 .read {
