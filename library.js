@@ -9,6 +9,14 @@ function Book(title, author, series, bookNumber, read) {
     this.id = crypto.randomUUID();
 }
 
+        Book.prototype.toggleRead = function() {
+            if (this.read == 'no') {
+                this.read = 'yes';
+            } else if (this.read == 'yes') {
+                this.read = 'no';
+            }
+        }
+
 function addBookToLibrary(title, author, series, bookNumber, read) {
     const book = new Book(title,author, series, bookNumber, read);
     myLibrary.push(book);
@@ -46,6 +54,18 @@ function displayMyLibrary(array) {
         readP.classList.add('book-info');
         readP.textContent = `Read: ${book.read}`;
         newCard.appendChild(readP);
+
+        const readButton = document.createElement('button');
+        readButton.classList.add('read');
+        readButton.textContent = 'Read';
+
+        readButton.addEventListener('click', function() {
+            book.toggleRead();
+            displayMyLibrary(myLibrary);
+            return myLibrary;
+        })
+
+        newCard.appendChild(readButton);
 
         const deleteButton = document.createElement('button');
         deleteButton.classList.add('delete');

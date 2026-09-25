@@ -137,4 +137,15 @@ fieldset legend {
     border: 1px solid var(--cream);
     border-radius: 5px;
     color: var(--espresso);
+    margin-top: 5px;
+}
+
+.read {
+    width: 60px;
+    align-self: end;
+    font-size: 10px;
+    background-color: var(--tan);
+    border: 1px solid var(--cream);
+    border-radius: 5px;
+    color: var(--espresso);
 }
